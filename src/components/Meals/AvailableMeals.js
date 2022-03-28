@@ -1,5 +1,7 @@
 import React from 'react'
+import Card from '../UI/Card'
 import './availableMeals.scss'
+import MealItem from './MealItem'
 
 const DUMMY_MEALS = [
   { id: 'm1', name: 'sushi', description: 'sea food', price: 22.29 },
@@ -10,11 +12,16 @@ const DUMMY_MEALS = [
 function AvailableMeals() {
   return (
     <section className='meals'>
-      <ul>
-        {DUMMY_MEALS.map((meal) => (
-          <li>{meal.name}</li>
-        ))}
-      </ul>
+      <Card>
+        <ul>
+          {DUMMY_MEALS.map((meal) => (
+            <MealItem
+              key={meal.id}
+              meal={meal}
+            />
+          ))}
+        </ul>
+      </Card>
     </section>
   )
 }
