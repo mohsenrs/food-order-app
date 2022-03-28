@@ -16,7 +16,7 @@ function MealItemForm() {
           defaultValue: '1',
         }}
       />
-      <button>add+</button>
+      <button>Add+</button>
     </form>
   )
 }
